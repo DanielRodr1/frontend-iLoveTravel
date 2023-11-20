@@ -1,0 +1,132 @@
+<!--INICIO DEL CUERPO-->
+<body>
+  <!-- Imagen de fondo en una columna -->
+  <div>
+    <img src="../../../assets/fondo-perfil.png" alt="Fondo" class="w-full h-full object-cover relative">
+    <!-- Imagen de perfil circular superpuesta -->
+  </div>
+
+  <!--PARTE DE INFORMACIÓN DEL PERFIL Y SU IMAGEN-->
+  <div class="flex flex-row absolute top-1/2 mx-48 items-end">
+    <div class="flex flex-col">
+      <img src="../../../assets/perfilSIT.png" alt="Imagen de perfil" class="rounded-full border-white border-4">
+    </div>
+    <!-- Columna a la derecha de la imagen -->
+
+    <div class="flex flex-col ml-4">
+      <!-- Nombre del usuario, tiempo como miembro y descripción -->
+      <h2 class="principal flex flex-row items-center">
+        Daniel Rodriguez
+        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="accent-amber-300 ml-3" style="fill:#dbbd5a">
+          <path d="M192 93.7C192 59.5 221 0 256 0c36 0 64 59.5 64 93.7l0 66.3L497.8 278.5c8.9 5.9 14.2 15.9 14.2 26.6v56.7c0 10.9-10.7 18.6-21.1 15.2L320 320v80l57.6 43.2c4 3 6.4 7.8 6.4 12.8v42c0 7.8-6.3 14-14 14c-1.3 0-2.6-.2-3.9-.5L256 480 145.9 511.5c-1.3 .4-2.6 .5-3.9 .5c-7.8 0-14-6.3-14-14V456c0-5 2.4-9.8 6.4-12.8L192 400V320L21.1 377C10.7 380.4 0 372.7 0 361.8V305.1c0-10.7 5.3-20.7 14.2-26.6L192 160V93.7z"/>
+        </svg>
+      </h2>
+      <p class="font-medium mt-2 flex flex-row items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-6 h-6 mr-2" style="fill:#000000">
+          <path d="M224 0a128 128 0 1 1 0 256A128 128 0 1 1 224 0zM178.3 304h91.4c20.6 0 40.4 3.5 58.8 9.9C323 331 320 349.1 320 368c0 59.5 29.5 112.1 74.8 144H29.7C13.3 512 0 498.7 0 482.3C0 383.8 79.8 304 178.3 304zM352 368a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-80c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16s-7.2-16-16-16H512V304c0-8.8-7.2-16-16-16z"/>
+        </svg>
+        Miembro desde 29 de Noviembre del 2021
+      </p>
+      <p class="font-medium mt-2">Siempre con una maleta lista para explorar nuevos horizontes, encontrar tesoros culturales y crear recuerdos en lugares lejanos. </p>
+      <p class="font-medium mt-2 flex flex-row items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+        </svg>
+        Actualmente en Australia
+      </p>
+    </div>
+
+    <!--TABS DE PERFIL-->
+    <div class="w-full h-auto">
+      <mat-tab-group>
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+              </svg>
+            </mat-icon>
+            Acerca de
+          </ng-template>
+          <h2 class="name font-bold">DANIEL RODRIGUEZ</h2>
+          <div class="flex flex-row">
+            <h4 class="info">Género</h4>
+            <h4 class="info">Fecha de Nacimiento</h4>
+            <h4 class="info">Estado Civil</h4>
+            <h4 class="info">País de Origen</h4>
+          </div>
+          <div class="flex flex-row">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, architecto, asperiores cum deleniti dolorem dolores doloribus esse eveniet ex explicabo facilis ipsa, labore maxime nobis non officia quasi rerum tenetur!</p>
+          </div>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+              </svg>
+            </mat-icon>
+            Fotos
+          </ng-template>
+          <div class="imgs">
+            <div class="flex flex-row justify-center items-center">
+
+              <!-- Botón estático junto a la primera foto -->
+              <button mat-icon-button class="bg-gray-200 flex flex-col justify-center items-center p-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2/4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                <h3>Subir imagen</h3>
+              </button>
+
+              <div>
+                <img src="../../../assets/turista.png" alt="foto del viajero 1" class="perfilImgs">
+              </div>
+
+              <div>
+                <img src="../../../assets/turista.png" alt="foto del viajero 1" class="perfilImgs">
+              </div>
+
+            </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab>
+          <ng-template mat-tab-label>
+            <mat-icon>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5m-9-6h.008v.008H12v-.008zM12 15h.008v.008H12V15zm0 2.25h.008v.008H12v-.008zM9.75 15h.008v.008H9.75V15zm0 2.25h.008v.008H9.75v-.008zM7.5 15h.008v.008H7.5V15zm0 2.25h.008v.008H7.5v-.008zm6.75-4.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V15zm0 2.25h.008v.008h-.008v-.008zm2.25-4.5h.008v.008H16.5v-.008zm0 2.25h.008v.008H16.5V15z" />
+              </svg>
+            </mat-icon>
+            Itinerarios
+          </ng-template>
+          <!-- Botón estático junto a la primera foto -->
+
+          <div class="flex flex-row justify-center items-center">
+            <button mat-icon-button class="bg-gray-200 flex flex-col justify-center items-center p-0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-2/4 mb-4" style="fill:#000000">
+                <path d="M184 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H96c-35.3 0-64 28.7-64 64v16 48V448c0 35.3 28.7 64 64 64H416c35.3 0 64-28.7 64-64V192 144 128c0-35.3-28.7-64-64-64H376V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H184V24zM80 192H432V448c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V192zm176 40c-13.3 0-24 10.7-24 24v48H184c-13.3 0-24 10.7-24 24s10.7 24 24 24h48v48c0 13.3 10.7 24 24 24s24-10.7 24-24V352h48c13.3 0 24-10.7 24-24s-10.7-24-24-24H280V256c0-13.3-10.7-24-24-24z"/>
+              </svg>
+              <h3>Añadir Itinerario</h3>
+            </button>
+
+            <mat-card>
+              <mat-card-content>Simple card</mat-card-content>
+            </mat-card>
+
+            <mat-card>
+              <mat-card-content>Simple card</mat-card-content>
+            </mat-card>
+
+          </div>
+
+        </mat-tab>
+
+      </mat-tab-group>
+    </div>
+
+  </div>
+</body>
