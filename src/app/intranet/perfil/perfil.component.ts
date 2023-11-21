@@ -18,4 +18,5 @@ export class PerfilComponent {
   imagePerfil='assets/perfilSIT.png'
   imagesPerson='assets/turista.png'
   imageItinerario='assets/Itinerario.png'
+  imageFondo='assets/fondo-perfil.png'
 }
