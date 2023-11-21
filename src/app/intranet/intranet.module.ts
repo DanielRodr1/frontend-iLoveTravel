@@ -11,6 +11,7 @@ import {MatCardModule} from "@angular/material/card";
 import { PersonasComponent } from './personas/personas.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatInputModule} from "@angular/material/input";
     MatIconModule,
     MatCardModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    FormsModule
   ]
 })
 export class IntranetModule { }

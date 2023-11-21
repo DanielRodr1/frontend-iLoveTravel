@@ -2,165 +2,43 @@
   <!-- Tu contenido aquí -->
   <h1 class="text-blue-950">Personas</h1>
 
-  <form>
+  <form (ngSubmit)="buscarPersonas()">
 
-    <input type="text" placeholder="Nombre(s)">
-    <input type="text" placeholder="Apellido(s)">
-    <input type="text" placeholder="País">
-    <input type="text" placeholder="Departamento/estado">
-    <input type="text" placeholder="Ciudad">
+    <input type="text" placeholder="Nombre(s)" name="nombre">
+    <input type="text" placeholder="Apellido(s)" name="apellido">
+    <input type="text" placeholder="País" [(ngModel)]="searchForm.pais" name="pais">
+    <input type="text" placeholder="Departamento/estado" name="estado">
+    <input type="text" placeholder="Ciudad" name="ciudad">
     <button type="submit" class="btn">BUSCAR</button>
 
   </form>
 
-  <div class="flex flex-row w-full my-8">
-
+  <div *ngFor="let person of (filteredPeople.length > 0 ? filteredPeople : people)" class="flex flex-row w-full my-8">
     <div class="flex flex-col columns-3">
-      <img src="assets/perfilSIT.png" class=" bg-gray-500 rounded-full" alt="imagen de usuario">
+      <img src={{person.imagePerfil}} class=" bg-gray-500 rounded-full" alt="imagen de usuario">
     </div>
 
     <div class="flex flex-col columns-6 w-3/5 justify-center mx-8">
-      <h2>Carlos Ruiz Guarniz</h2>
-      <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur dolorum facere minima neque praesentium sint. Alias delectus, exercitationem impedit nesciunt sed velit. Aliquam incidunt mollitia nobis quia recusandae, reiciendis.</p>
+      <h2>{{ person.name }} {{ person.lastName }}</h2>
+      <p class="text-gray-500">{{person.description}}</p>
       <div class="flex flex-row items-center">
-        <p>Madrid, España</p>
+        <p>{{person.city}}, {{person.country}}</p>
+
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+        </svg>
 
         <p class="flex flex-row items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-          </svg>
-          Español, Inglés
+          {{person.language}}
         </p>
       </div>
     </div>
-
     <div class="flex flex-col columns-3 justify-center items-center ml-4">
       <div class="flex flex-row">
         <button class="btn2 bg-amber-500">Ver Perfil</button>
         <button class="btn2 bg-green-600">Contactar</button>
       </div>
     </div>
-
-  </div>
-
-  <div class="flex flex-row w-full my-8">
-
-    <div class="flex flex-col columns-3">
-      <img src="assets/perfilSIT.png" class=" bg-gray-500 rounded-full" alt="imagen de usuario">
-    </div>
-
-    <div class="flex flex-col columns-6 w-3/5 justify-center mx-8">
-      <h2>Carlos Ruiz Guarniz</h2>
-      <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur dolorum facere minima neque praesentium sint. Alias delectus, exercitationem impedit nesciunt sed velit. Aliquam incidunt mollitia nobis quia recusandae, reiciendis.</p>
-      <div class="flex flex-row items-center">
-        <p>Madrid, España</p>
-
-        <p class="flex flex-row items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-          </svg>
-          Español, Inglés
-        </p>
-      </div>
-    </div>
-
-    <div class="flex flex-col columns-3 justify-center items-center ml-4">
-      <div class="flex flex-row">
-        <button class="btn2 bg-amber-500">Ver Perfil</button>
-        <button class="btn2 bg-green-600">Contactar</button>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="flex flex-row w-full my-8">
-
-    <div class="flex flex-col columns-3">
-      <img src="assets/perfilSIT.png" class=" bg-gray-500 rounded-full" alt="imagen de usuario">
-    </div>
-
-    <div class="flex flex-col columns-6 w-3/5 justify-center mx-8">
-      <h2>Carlos Ruiz Guarniz</h2>
-      <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur dolorum facere minima neque praesentium sint. Alias delectus, exercitationem impedit nesciunt sed velit. Aliquam incidunt mollitia nobis quia recusandae, reiciendis.</p>
-      <div class="flex flex-row items-center">
-        <p>Madrid, España</p>
-
-        <p class="flex flex-row items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-          </svg>
-          Español, Inglés
-        </p>
-      </div>
-    </div>
-
-    <div class="flex flex-col columns-3 justify-center items-center ml-4">
-      <div class="flex flex-row">
-        <button class="btn2 bg-amber-500">Ver Perfil</button>
-        <button class="btn2 bg-green-600">Contactar</button>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="flex flex-row w-full my-8">
-
-    <div class="flex flex-col columns-3">
-      <img src="assets/perfilSIT.png" class=" bg-gray-500 rounded-full" alt="imagen de usuario">
-    </div>
-
-    <div class="flex flex-col columns-6 w-3/5 justify-center mx-8">
-      <h2>Carlos Ruiz Guarniz</h2>
-      <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur dolorum facere minima neque praesentium sint. Alias delectus, exercitationem impedit nesciunt sed velit. Aliquam incidunt mollitia nobis quia recusandae, reiciendis.</p>
-      <div class="flex flex-row items-center">
-        <p>Madrid, España</p>
-
-        <p class="flex flex-row items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-          </svg>
-          Español, Inglés
-        </p>
-      </div>
-    </div>
-
-    <div class="flex flex-col columns-3 justify-center items-center ml-4">
-      <div class="flex flex-row">
-        <button class="btn2 bg-amber-500">Ver Perfil</button>
-        <button class="btn2 bg-green-600">Contactar</button>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="flex flex-row w-full my-8">
-
-    <div class="flex flex-col columns-3">
-      <img src="assets/perfilSIT.png" class=" bg-gray-500 rounded-full" alt="imagen de usuario">
-    </div>
-
-    <div class="flex flex-col columns-6 w-3/5 justify-center mx-8">
-      <h2>Carlos Ruiz Guarniz</h2>
-      <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur dolorum facere minima neque praesentium sint. Alias delectus, exercitationem impedit nesciunt sed velit. Aliquam incidunt mollitia nobis quia recusandae, reiciendis.</p>
-      <div class="flex flex-row items-center">
-        <p>Madrid, España</p>
-
-        <p class="flex flex-row items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-          </svg>
-          Español, Inglés
-        </p>
-      </div>
-    </div>
-
-    <div class="flex flex-col columns-3 justify-center items-center ml-4">
-      <div class="flex flex-row">
-        <button class="btn2 bg-amber-500">Ver Perfil</button>
-        <button class="btn2 bg-green-600">Contactar</button>
-      </div>
-    </div>
-
   </div>
 
 </div>

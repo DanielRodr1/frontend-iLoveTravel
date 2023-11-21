@@ -22,6 +22,10 @@ div.imgs{
   position: relative;
 }
 
+.mat-mdc-tab-header{
+  background-color: #dbbd5a;
+}
+
 img.perfilImgs{
   object-fit: cover;
   width: 250px;
@@ -35,6 +39,10 @@ button{
 }
 
 mat-card{
+  margin-left: 30px;
+}
+
+mat-card > img{
   width: 250px;
   height: 250px;
 }
