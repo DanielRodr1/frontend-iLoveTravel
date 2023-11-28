@@ -6,10 +6,208 @@
 
   <!-- Elementos a la derecha -->
   <div class="flex items-center space-x-4">
-    <a routerLink="/personas" class="text-white">Regístrate</a>
-    <a routerLink="/crear-articulo" class="text-white border-2 border-white p-2">Iniciar Sesión</a>
+    <a routerLink="/register" class="text-white">Regístrate</a>
+    <a routerLink="/login" class="text-white border-2 border-white p-2">Iniciar Sesión</a>
 
   </div>
 </nav>
+<body>
+<div style="position: relative;">
+  <div class="w-557 h-418 mx-auto mt-0" style="margin-bottom: auto">
+    <img src="assets/fondo1ro.png" alt="Imagen debajo del navbar" class="w-full h-full object-cover" />
 
-<button routerLink="/perfil">Perfil</button>
+    <div class="absolute inset-0 flex items-center justify-left p-20 text-white text-left" >
+
+      <div class="" style="margin-top: -100px">
+        <h1 class="text-7xl font-bold mb-2 " style="margin-bottom: auto; letter-spacing:-2px">Vive experiencias</h1>
+        <h1 class="text-7xl font-bold mb-2" style="margin-bottom: auto; letter-spacing:-2px">inolvidables y conoce</h1>
+        <h1 class="text-7xl font-bold mb-2" style="margin-bottom: auto; letter-spacing:-2px" >a personas increibles</h1>
+        <p class="text-lg" style="margin-bottom: -8px">Nuestro compromiso es llevarte a aventuras extraordinarias, </p>
+        <p class="text-lg" style="margin-bottom: -8px">conectar con destinos fascinantes y enriquecer tu vida a través de </p>
+        <p class="text-lg" style="margin-bottom: -8px">experiencias de viaje inolvidables.  </p>
+        <button class="bg-blue-500text-white font-bold py-2 px-4  rounded-full mt-4" style="background-color: #204480">
+          Hazte miembro
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w-757 h-196 border-2 p-20">
+  <h1 class="text-7xl font-bold mb-2 " style="margin-bottom: auto; letter-spacing:-2px; color: #204480">Sobre nosotros</h1>
+  <p class="text-lg" style="margin-bottom: -8px; color: #204480">En nuestra comunidad, fomentamos la colaboración y el intercambio de información. Ya sea que estés buscando recomendaciones sobre destinos, consejos sobre cómo planificar un viaje, o historias emocionantes de viajes pasados, estamos aquí para ayudarte. Nuestros miembros tienen experiencias diversas, desde mochileros que recorren el mundo con un presupuesto ajustado hasta viajeros de lujo que buscan experiencias exclusivas. </p>
+</div>
+
+
+<div class="p-6" style="background-color: #F5A80F">
+  <div class="flex justify-center items-center  " style=" " >
+
+    <div class="text-white text-center  mx-7">
+      <img src="assets/Descubre.png" alt="Descripción de la imagen 1" class="w-28 h-auto mx-auto mb-1">
+      <h2 class="text-lg font-bold">DESCUBRE UN DESTINO</h2>
+    </div>
+
+
+    <div class="text-white text-center  mx-7 ">
+      <img src="assets/Planea.png" alt="Descripción de la imagen 2" class="w-28 h-auto mx-auto mb-1">
+      <h2 class="text-lg font-bold">PLANEA UN VIAJE</h2>
+    </div>
+
+
+    <div class="text-white text-center  mx-7 ">
+      <img src="assets/Recibe%20consejos.png" alt="Descripción de la imagen 3" class="w-28 h-auto mx-auto mb-1">
+      <h2 class="text-lg font-bold">RECIBE CONSEJOS</h2>
+    </div>
+  </div>
+</div>
+
+<div class="w-757 h-196 border-2 p-20">
+  <h1 class="text-7xl font-bold mb-2 " style="letter-spacing:-2px; color: #204480">Lugares y tips</h1>
+  <p class="text-lg" style="margin-bottom: -8px; color: #204480">Algunos usuarios creen que podrías disfrutar estas cosas para darte una escapada en tus vacaciones </p>
+  <div class="flex flex-row">
+
+
+    <div class="relative flex w-full max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg hover:transform hover:-translate-y-2 transition-transform" style="margin-top: 20px;" onclick="handleCardClick(1)">
+      <div class="relative mx-4 mt-4 overflow-hidden space-x-text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+        <img
+          src="assets/paris-louvre-piramide-hd.jpg"
+          alt="ui/ux review check"
+        />
+        <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+        <button
+          class="!absolute top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle font-sans text-xs font-medium uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+          data-ripple-dark="true"
+        >
+      <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+          class="w-6 h-6">
+          <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"></path>
+        </svg>
+      </span>
+        </button>
+      </div>
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+            Carlos Juarez Caprio
+          </h5>
+        </div>
+        <p class="block font-sans text-base antialiased font-light leading-relaxed text-gray-700">
+          Estuve por el Louvre y es increible, recomiendo mucho tomarse fotos frente al museo
+        </p>
+
+      </div>
+    </div>
+
+    <div class="relative flex w-full mx-12 max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg hover:transform hover:-translate-y-2 transition-transform" style="margin-top: 20px;" onclick="handleCardClick(1)">
+      <div class="relative  mt-4 overflow-hidden space-x-text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+        <img
+          src="assets/ca-times.brightspotcdn.com_.jpg"
+          alt="ui/ux review check"
+        />
+        <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+        <button
+          class="!absolute top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle font-sans text-xs font-medium uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+          data-ripple-dark="true"
+        >
+      <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+          class="w-6 h-6"
+        >
+          <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"></path>
+        </svg>
+      </span>
+        </button>
+      </div>
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+            Jose Gonzales Ruiz
+          </h5>
+        </div>
+        <p class="block font-sans text-base antialiased font-light leading-relaxed text-gray-700">
+          Estuve por el Colombia y es increible, recomiendo mucho ir a Cartagena
+        </p>
+
+      </div>
+    </div>
+
+
+
+    <div class="relative flex w-full  max-w-[26rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg hover:transform hover:-translate-y-2 transition-transform" style="margin-top: 20px;" onclick="handleCardClick(1)">
+      <div class="relative  mt-4 overflow-hidden space-x-text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+        <img
+          src="assets/sidney.jpg"
+          alt="ui/ux review check"
+        />
+        <div class="absolute inset-0 w-full h-full to-bg-black-10 bg-gradient-to-tr from-transparent via-transparent to-black/60"></div>
+        <button
+          class="!absolute top-4 right-4 h-8 max-h-[32px] w-8 max-w-[32px] select-none rounded-full text-center align-middle font-sans text-xs font-medium uppercase text-red-500 transition-all hover:bg-red-500/10 active:bg-red-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+          type="button"
+          data-ripple-dark="true"
+        >
+      <span class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          aria-hidden="true"
+          class="w-6 h-6"
+        >
+          <path d="M11.645 20.91l-.007-.003-.022-.012a15.247 15.247 0 01-.383-.218 25.18 25.18 0 01-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0112 5.052 5.5 5.5 0 0116.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 01-4.244 3.17 15.247 15.247 0 01-.383.219l-.022.012-.007.004-.003.001a.752.752 0 01-.704 0l-.003-.001z"></path>
+        </svg>
+      </span>
+        </button>
+      </div>
+      <div class="p-6">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="block font-sans text-xl antialiased font-medium leading-snug tracking-normal text-blue-gray-900">
+            Jude Castro Acuña
+          </h5>
+        </div>
+        <p class="block font-sans text-base antialiased font-light leading-relaxed text-gray-700">
+          Estuve por el Australia y es increible, recomiendo mucho tomarse fotos en la Opera House de Sídne
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="p-20" style="background-color: #F5A80F">
+  <div class="flex justify-center items-center m-18">
+    <div class="text-center mx-4">
+      <h1 class="text-2xl font-bold text-white" style="font-size: 55px; margin-bottom: 14px">Únete a nuestra comunidad</h1>
+      <h1 class="text-2xl font-bold text-white" style="font-size: 55px">de viajeros</h1>
+      <div class="mt-5">
+        <p class="text-white" style="margin-bottom: -8px">"Desde que me uní a I Love Travel, he descubierto destinos increíbles y he</p>
+        <p class="text-white" style="margin-bottom: -8px">hecho amigos de todo el mundo. No puedo esperar para seguir explorando con esta comunidad." - Violet Green</p>
+        <p class="text-white">con esta comunidad." - Violet Green</p>
+      </div>
+
+      <button class=" text-white py-2 px-4 rounded-full mt-2 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800" style="background-color: #204480" type="button">Únete ahora</button>
+    </div>
+  </div>
+</div>
+
+<div class="p-10" style="background-color: #2C5AA5">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-white" style="font-size: 55px">#ILOVETRAVEL</h1>
+    <div class="flex">
+      <button class="bg-blue-500 text-white py-2 px-4 rounded-full mr-2 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800" type="button">FACEBOOK</button>
+      <button class="bg-blue-500 text-white py-2 px-4 rounded-full mr-2 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800" type="button">TWITTER</button>
+      <button class="bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue active:bg-blue-800" type="button">INSTAGRAM</button>
+    </div>
+  </div>
+</div>
+</body>

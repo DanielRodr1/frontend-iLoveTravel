@@ -1,0 +1,76 @@
+.imagen-con-texto {
+  position: relative;
+  text-align: center;
+
+  img {
+    width: 140px; // Ajusta esto según tus necesidades
+    height: 600px;
+  }
+
+  p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; // El color del texto
+    // Otros estilos para tu texto
+  }
+}
+
+.contenedor, .wave-contenedor {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  height: 180px;
+  background: white;
+  color: #204480;
+
+  &.contenedor {
+    padding: -320px 0;
+    display: flex;
+  }
+}
+
+.text-lg{
+  text-align: justify;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+  margin-top: 15px;
+}
+
+.textsobrenosotros{
+  font-family: Poppins;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40.5px; /* 22% */
+  letter-spacing: -2px;
+}
+
+
+.subtitulo{
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12.5px; /* 104.167% */
+}
+
+.wave-contenedor {
+  margin-top: 350px;
+}
+
+
+.text-4xl{
+  font-size: 46px;
+  margin-bottom: 5px;
+}
+
+.textot{
+
+  margin-top: 150px;
+
+}
