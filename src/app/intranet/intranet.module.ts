@@ -12,12 +12,14 @@ import { PersonasComponent } from './personas/personas.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
+import { LugaresComponent } from './lugares/lugares.component';
 
 @NgModule({
   declarations: [
     PerfilComponent,
     IntranetComponent,
-    PersonasComponent
+    PersonasComponent,
+    LugaresComponent
   ],
   imports: [
     CommonModule,
