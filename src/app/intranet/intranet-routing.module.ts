@@ -7,12 +7,14 @@ import {PlaceHomeComponent} from "./place-home/place-home.component";
 import {PerfilComponent} from "./perfil/perfil.component";
 import {HomelogueadoComponent} from "./homelogueado/homelogueado.component";
 import {PersonasComponent} from "./personas/personas.component";
+import {LugaresComponent} from "./lugares/lugares.component";
 
 
 const routes: Routes = [
   { path:'', component: IntranetComponent, children: [
       { path:'perfil', component: PerfilComponent },
       { path: 'personas', component: PersonasComponent },
+      { path: 'lugares', component: LugaresComponent },
       { path: 'homeLogeado', component: HomelogueadoComponent },
       { path: 'create', component: CreateComponent},
       { path: 'createTip', component: CreateTipComponent },
