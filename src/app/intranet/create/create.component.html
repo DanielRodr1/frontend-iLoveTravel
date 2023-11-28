@@ -1,0 +1,38 @@
+<main>
+
+  <div class="newplace">
+
+    <div class="newplace-content">
+
+      <h3>Hola! Nos encanta que con tu ayuda crezca nuestra fuente de conocimiento sobre distintos lugares.</h3>
+
+      <div class="place-name">
+        <h2>Nombre del lugar</h2>
+        <div class="place-country">
+          <input type="text" [(ngModel)]="place_name" class="place-textbox" placeholder="Ingresa el nombre del lugar turístico">
+          <input type="text" [(ngModel)]="country" class="country-textbox" placeholder="País">
+        </div>
+      </div>
+
+      <div class="place-text">
+        <h2>Descripción</h2>
+        <input type="text" [(ngModel)]="description" class="text-textbox" placeholder="Sé lo más breve posible, es sólo una presentación">
+      </div>
+
+      <div class="place-img">
+        <h2>Imagen</h2>
+        <input type="text" [(ngModel)]="image" class="img-textbox" placeholder="Añade una imagen representativa como fondo de pantalla (png o jpg)">
+      </div>
+
+      <a routerLink="/placeHome">
+        <button type="button" class="btn-create">
+          <p>Crear</p>
+        </button>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<router-outlet></router-outlet>
+
