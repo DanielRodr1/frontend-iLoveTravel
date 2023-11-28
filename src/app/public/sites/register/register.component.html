@@ -1,4 +1,4 @@
-<div class="flex flex-row pl-72 pr-72 pt-12 pb-12 bg-gradient-to-bl from-purple-700 via-pink-500 to-blue-800 font-thin">
+<div class="flex flex-row pl-72 pr-72 pt-12 pb-12 bg-gradient-to-bl from-yellow-400 via-white to-blue-800 font-thin">
 
   <div class="flex-1 p-0 rounded-bl-2xl rounded-tl-2xl border-solid border-gray-300 box-border overflow-hidden">
     <img class="w-full h-full right-2 object-cover" src="./assets/mochilero.png" alt="Imagen de fondo">
@@ -8,39 +8,53 @@
     <form class="container leading-6 pl-10 pr-10">
       <div class="mb-4">
         <span class="flex">
-          <div class="w-9/12">
+          <div class="w-8/12">
             <h1 class="font-extrabold">BIENVENIDO!</h1><br>
           </div>
-          <div class="w-3/12">
+          <div class="w-4/12">
             <a href="#"><img class="h-12" src="./assets/logo.png"></a>
           </div>
         </span>
 
-        <label>Nombre de usuario</label><br>
-        <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Nombre de usuario"><br>
+        <span class="flex">
+          <div class="pr-2">
+            <label>Nombre</label>
+            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Nombre">
+          </div>
+          <div>
+            <label>Apellido</label>
+            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Apellido">
+          </div>
+        </span>
         <label>Correo electrónico</label><br>
         <input type="email" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Correo electrónico"><br>
         <label>Contraseña</label><br>
         <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Contraseña"><br>
         <label>Repetir contraseña</label><br>
         <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Repetir contraseña"><br>
-        <label for="countries">País</label><br>
-        <select id="countries" class="mb-4 p-2 border border-gray-300 rounded w-full" name="countries">
-          <option value="peru">Perú</option>
-          <option value="brasil">Brasil</option>
-          <option value="argentina">Argentina</option>
-          <option value="chile">Chile</option>
-          <option value="bolivia">Bolivia</option>
-          <option value="venezuela">Venezuela</option>
-          <option value="ecuador">Ecuador</option>
-          <option value="honduras">Honduras</option>
-          <option value="uruguay">Uruguay</option>
-          <option value="paraguay">Paraguay</option>
-          <option value="panama">Panama</option>
-          <option value="salvador">El Salvador</option>
-        </select>
-        <label>Fecha de nacimiento</label>
-        <input type="date" class="mb-4 p-2 border border-gray-300 rounded w-full"><br>
+        <span class="flex">
+          <div class="pr-2 w-1/2">
+            <label for="countries">País</label>
+            <select id="countries" class="mb-4 p-2 border border-gray-300 rounded w-full" name="countries">
+              <option value="peru">Perú</option>
+              <option value="brasil">Brasil</option>
+              <option value="argentina">Argentina</option>
+              <option value="chile">Chile</option>
+              <option value="bolivia">Bolivia</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="ecuador">Ecuador</option>
+              <option value="honduras">Honduras</option>
+              <option value="uruguay">Uruguay</option>
+              <option value="paraguay">Paraguay</option>
+              <option value="panama">Panama</option>
+              <option value="salvador">El Salvador</option>
+            </select>
+          </div>
+          <div class="w-1/2">
+            <label>Fecha de nacimiento</label>
+            <input type="date" class="mb-4 p-2 border border-gray-300 rounded w-full">
+          </div>
+        </span>
         <div class="text-center">
           <button type="submit" class="mb-4 p-2 text-white rounded bg-amber-400">Registrate</button><br>
           <a class="mb-4 text-blue-600 underline">Ir a Inicio de Sesión</a>
