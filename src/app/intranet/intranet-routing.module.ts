@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {PerfilComponent} from "./perfil/perfil.component";
 import {IntranetComponent} from "./intranet.component";
+import {CreateComponent} from "./create/create.component";
+import {CreateTipComponent} from "./create-tip/create-tip.component";
+import {PlaceHomeComponent} from "./place-home/place-home.component";
+import {PerfilComponent} from "./perfil/perfil.component";
 import {PersonasComponent} from "./personas/personas.component";
 import {HomelogueadoComponent} from "./homelogueado/homelogueado.component";
+
 
 const routes: Routes = [
   { path:'', component: IntranetComponent, children: [
       { path:'perfil', component: PerfilComponent },
       { path: 'personas', component: PersonasComponent },
-      { path: 'homeLogeado', component: HomelogueadoComponent }
+      { path: 'homeLogeado', component: HomelogueadoComponent },
+      { path: 'create', component: CreateComponent},
+      { path: 'createTip', component: CreateTipComponent },
+      { path: 'placeHome', component: PlaceHomeComponent }
     ]
   }
 ];

@@ -1,0 +1,39 @@
+<main>
+
+  <div class="newplace">
+
+    <div class="newplace-content">
+
+      <h3>Completa los campos de la mejor manera posible para contribuir con información útil para otros viajeros.</h3>
+
+      <div class="title">
+        <h2>Título</h2>
+        <input type="text" [(ngModel)]="title" class="tip-title" placeholder="Ingresa el nombre oficial del lugar">
+      </div>
+
+      <div class="location">
+        <h2>Ubicación</h2>
+        <input type="text" [(ngModel)]="location" class="tip-location" placeholder="Ingresa la dirección completa del lugar">
+      </div>
+
+      <div class="description">
+        <h2>Descripción</h2>
+        <input type="text" [(ngModel)]="description" class="tip-description" placeholder="Sé lo más detallista posible, considera anotar precios y calidad de atención">
+      </div>
+
+      <div class="image">
+        <h2>Imagen</h2>
+        <input type="text" [(ngModel)]="photo" class="tip-image" placeholder="Añade una imagen referente en formato png o jpg (*Opcional)">
+      </div>
+
+      <a routerLink="/placeHome">
+        <button type="button" class="btn-add">
+          <p>Añadir</p>
+        </button>
+      </a>
+
+    </div>
+  </div>
+
+</main>
+
