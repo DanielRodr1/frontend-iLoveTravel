@@ -17,7 +17,7 @@ import {FormsModule} from "@angular/forms";
   declarations: [
     PerfilComponent,
     IntranetComponent,
-    PersonasComponent,
+    PersonasComponent
   ],
   imports: [
     CommonModule,
