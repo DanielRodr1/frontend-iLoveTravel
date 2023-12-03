@@ -12,7 +12,7 @@ export class PerfilComponent {
   description="Siempre con una maleta lista para explorar nuevos horizontes, encontrar tesoros culturales y crear recuerdos en lugares lejanos."
   ubication="Australia"
   country="Perú"
-  maritalStatuus="Soltero"
+  maritalStatus="Soltero"
   dateBorn="15 de Mayo del 2024"
   gener="Masculino"
   imagePerfil='assets/perfilSIT.png'

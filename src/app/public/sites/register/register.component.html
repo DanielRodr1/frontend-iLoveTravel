@@ -5,37 +5,37 @@
   </div>
 
   <div class="flex-1 p-8 rounded-br-2xl rounded-tr-2xl  border-solid border-gray-300 box-border bg-white h-full">
-    <form class="container leading-6 pl-10 pr-10">
+    <form class="container leading-6 pl-10 pr-10" (ngSubmit)="registerUser()" method="post">
       <div class="mb-4">
-        <span class="flex">
+        <div class="flex">
           <div class="w-8/12">
             <h1 class="font-extrabold">BIENVENIDO!</h1><br>
           </div>
           <div class="w-4/12">
-            <a href="/"><img class="h-12" src="./assets/logo.png"></a>
+            <a href="/"><img class="h-12" src="./assets/logo.png" alt="logo empresa"></a>
           </div>
-        </span>
+        </div>
 
-        <span class="flex">
+        <div class="flex">
           <div class="pr-2">
-            <label>Nombre</label>
-            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Nombre">
+            <label for="firstName">Nombre</label>
+            <input type="text" id="firstName" name="firstName" [(ngModel)]="newUser.firstName" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Nombre">
           </div>
           <div>
-            <label>Apellido</label>
-            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Apellido">
+            <label for="lastName">Apellido</label>
+            <input type="text" id="lastName" name="lastName" [(ngModel)]="newUser.lastName" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Apellido">
           </div>
-        </span>
-        <label>Correo electrónico</label><br>
-        <input type="email" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Correo electrónico"><br>
-        <label>Contraseña</label><br>
-        <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Contraseña"><br>
+        </div>
+        <label for="email">Correo electrónico</label><br>
+        <input type="email" id="email" name="email" [(ngModel)]="newUser.email" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Correo electrónico"><br>
+        <label for="password">Contraseña</label><br>
+        <input type="password" id="password" name="password" [(ngModel)]="newUser.password" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Contraseña"><br>
         <label>Repetir contraseña</label><br>
         <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Repetir contraseña"><br>
-        <span class="flex">
+        <div class="flex">
           <div class="pr-2 w-1/2">
-            <label for="countries">País</label>
-            <select id="countries" class="mb-4 p-2 border border-gray-300 rounded w-full" name="countries">
+            <label for="nationality">País</label>
+            <select id="nationality" [(ngModel)]="newUser.nationality" class="mb-4 p-2 border border-gray-300 rounded w-full" name="nationality">
               <option value="peru">Perú</option>
               <option value="brasil">Brasil</option>
               <option value="argentina">Argentina</option>
@@ -51,16 +51,15 @@
             </select>
           </div>
           <div class="w-1/2">
-            <label>Fecha de nacimiento</label>
-            <input type="date" class="mb-4 p-2 border border-gray-300 rounded w-full">
+            <label for="birthdate">Fecha de nacimiento</label>
+            <input type="date" id="birthdate" name="birthdate" [(ngModel)]="newUser.birthdate" class="mb-4 p-2 border border-gray-300 rounded w-full">
           </div>
-        </span>
+        </div>
         <div class="text-center">
           <button type="submit" class="mb-4 p-2 text-white rounded bg-amber-400">Registrate</button><br>
-          <a class="mb-4 text-blue-600 underline" routerLink="Login">Ir a Inicio de Sesión</a>
+          <a class="mb-4 text-blue-600 underline" [routerLink]="['login']">Ir a Inicio de Sesión</a>
         </div>
       </div>
     </form>
-
   </div>
 </div>
