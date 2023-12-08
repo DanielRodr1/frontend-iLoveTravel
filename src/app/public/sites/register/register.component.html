@@ -19,23 +19,28 @@
         <span class="flex">
           <div class="pr-2">
             <label>Nombre</label>
-            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Nombre">
+            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" id="name" placeholder="Nombre">
           </div>
           <div>
             <label>Apellido</label>
-            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Apellido">
+            <input type="text" class="mb-4 p-2 border border-gray-300 rounded w-full" id="lastName"
+              placeholder="Apellido">
           </div>
         </span>
         <label>Correo electrónico</label><br>
-        <input type="email" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Correo electrónico"><br>
+        <input type="email" class="mb-4 p-2 border border-gray-300 rounded w-full" id="email"
+          placeholder="Correo electrónico"><br>
         <label>Contraseña</label><br>
-        <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Contraseña"><br>
+        <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" id="password"
+          placeholder="Contraseña"><br>
         <label>Repetir contraseña</label><br>
-        <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" placeholder="Repetir contraseña"><br>
+        <input type="password" class="mb-4 p-2 border border-gray-300 rounded w-full" id="repeatPassword"
+          placeholder="Repetir contraseña"><br>
         <span class="flex">
           <div class="pr-2 w-1/2">
             <label for="countries">País</label>
-            <select id="countries" class="mb-4 p-2 border border-gray-300 rounded w-full" name="countries">
+            <select id="countries" class="mb-4 p-2 border border-gray-300 rounded w-full" name="countries"
+              id="countries">
               <option value="peru">Perú</option>
               <option value="brasil">Brasil</option>
               <option value="argentina">Argentina</option>
@@ -52,12 +57,13 @@
           </div>
           <div class="w-1/2">
             <label>Fecha de nacimiento</label>
-            <input type="date" class="mb-4 p-2 border border-gray-300 rounded w-full">
+            <input type="date" id="birthDate" class="mb-4 p-2 border border-gray-300 rounded w-full">
           </div>
         </span>
         <div class="text-center">
-          <button type="submit" class="mb-4 p-2 text-white rounded bg-amber-400">Registrate</button><br>
-          <a class="mb-4 text-blue-600 underline" routerLink="Login">Ir a Inicio de Sesión</a>
+          <button type="submit" (click)="onRegisterClick()"
+            class="mb-4 p-2 text-white rounded bg-amber-400">Registrate</button><br>
+          <a class="mb-4 text-blue-600 underline" routerLink="../login">Ir a Inicio de Sesión</a>
         </div>
       </div>
     </form>
