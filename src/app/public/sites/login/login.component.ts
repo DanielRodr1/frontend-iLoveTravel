@@ -21,13 +21,18 @@ export class LoginComponent {
       .post('http://localhost:8080/api/v1/users/login', loginRequest)
       .subscribe(
         (response: any) => {
-          // Aquí puedes manejar la respuesta de la API, por ejemplo, redirigir al usuario a la página de inicio
           console.log(response);
-          this.router.navigate(['../homeLogueado']);
+          if (response.token) {
+            return this.router.navigate(['../homeLogueado']);
+          }
+          return alert('Usuario y/o contraseña incorrectas');
         },
         (error) => {
-          // Aquí puedes manejar el error, por ejemplo, mostrar un mensaje de error al usuario
           console.error(error);
+
+          if (error.status === 401) {
+            alert('Usuario y/o contraseña incorrectas');
+          }
         }
       );
   }
