@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,6 +23,13 @@ export class LoginComponent {
         (response: any) => {
           console.log(response);
           if (response.token) {
+            localStorage.setItem('token', response.token);
+
+            const headers = new HttpHeaders().set(
+              'Authorization',
+              `Bearer ` + response.token.trim()
+            );
+
             return this.router.navigate(['../homeLogueado']);
           }
           return alert('Usuario y/o contraseña incorrectas');
