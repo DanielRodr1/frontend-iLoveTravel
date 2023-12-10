@@ -1,36 +1,39 @@
 <main>
-
   <div class="newplace">
-
     <div class="newplace-content">
-
       <h3>Hola! Nos encanta que con tu ayuda crezca nuestra fuente de conocimiento sobre distintos lugares.</h3>
 
-      <div class="place-name">
-        <h2>Nombre del lugar</h2>
-        <div class="place-country">
-          <input type="text" [(ngModel)]="place_name" class="place-textbox" placeholder="Ingresa el nombre del lugar turístico">
-          <input type="text" [(ngModel)]="country" class="country-textbox" placeholder="País">
+      <!-- Agrega el formulario -->
+      <form>
+
+        <div class="place-name">
+          <h2>Nombre del lugar</h2>
+          <div class="place-country">
+            <input type="text" name="place_name" class="place-textbox" id="place_name"
+              placeholder="Ingresa el nombre del lugar turístico">
+            <input type="text" name="country" class="country-textbox" placeholder="País" id="country">
+          </div>
         </div>
-      </div>
 
-      <div class="place-text">
-        <h2>Descripción</h2>
-        <input type="text" [(ngModel)]="description" class="text-textbox" placeholder="Sé lo más breve posible, es sólo una presentación">
-      </div>
+        <div class="place-text">
+          <h2>Descripción</h2>
+          <input type="text" name="description" class="text-textbox" id="description"
+            placeholder="Sé lo más breve posible, es sólo una presentación">
+        </div>
 
-      <div class="place-img">
-        <h2>Imagen</h2>
-        <input type="text" [(ngModel)]="image" class="img-textbox" placeholder="Añade una imagen representativa como fondo de pantalla (png o jpg)">
-      </div>
+        <div class="place-img">
+          <h2>Imagen</h2>
+          <input type="text" name="image" class="img-textbox" id="image"
+            placeholder="Añade una imagen representativa como fondo de pantalla (png o jpg)">
+        </div>
 
-      <button type="button" routerLink="/intranet/placeHome" class="btn-create">
-        Crear
-      </button>
+        <button type="button" (click)="crearLugar()" class="btn-create">
+          Crear
+        </button>
 
+      </form>
     </div>
   </div>
 </main>
 
 <router-outlet></router-outlet>
-
