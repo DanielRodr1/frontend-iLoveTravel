@@ -35,10 +35,12 @@ export class CreateComponent {
     };
 
     this.httpClient.post(apiUrl, nuevoLugar, { headers }).subscribe(
-      (response: any) => {
-        alert(response);
-      },
+      (response: any) => {},
       (error: any) => {
+        if (error.status == 201) {
+          this.router.navigate(['/intranet/lugares']);
+        }
+        if (error.error != undefined) alert(error.error);
         console.error('Error al llamar a la API:', error);
       }
     );
