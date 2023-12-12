@@ -25,6 +25,8 @@ export class LoginComponent {
           if (response.token) {
             localStorage.setItem('token', response.token);
 
+            localStorage.setItem('email', email);
+
             const headers = new HttpHeaders().set(
               'Authorization',
               `Bearer ` + response.token.trim()
