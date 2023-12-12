@@ -33,7 +33,7 @@
       <h1 class="text-3xl font-extrabold text-center"> Resultados de tu busqueda </h1>
     </div>
     <div *ngFor="let place of responseData" class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
-      <div
+      <button type="button" (click)="mostrarDetallesPlace(place)"
         class="bg-white m-h-64 pb-5 transform hover:translate-y-2 hover:shadow-xl transition duration-300 rounded-2xl">
         <figure class="mb-2 ">
           <img src="assets/manarola.jpg" alt="" class="h-64 ml-auto mr-auto rounded-2xl" />
@@ -46,7 +46,7 @@
             <h5 class="text-2xl font-bold leading-none text-center"> {{place.city}}, {{place.country}} </h5>
           </div>
         </div>
-      </div>
+      </button>
     </div>
 
 
