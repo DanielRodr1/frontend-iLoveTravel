@@ -40,7 +40,6 @@ export class LugaresComponent implements OnInit {
       this.httpClient.get<any[]>(this.apiUrl, { headers }).subscribe(
         (response) => {
           this.responseData = response;
-          console.log(this.responseData);
           this.displayedData = this.responseData;
         },
         (error) => {
