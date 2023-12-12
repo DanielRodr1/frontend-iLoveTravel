@@ -46,7 +46,6 @@ export class PerfilComponent implements OnInit {
         .subscribe(
           (response) => {
             const profileInfo = response['Acerca de'];
-            console.log(response['Acerca de']);
             this.name = profileInfo['Nombre Completo'];
             this.country = profileInfo['Nacionalidad'];
             this.dateBorn = new Date(
