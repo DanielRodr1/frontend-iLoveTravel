@@ -27,6 +27,25 @@ export class LugaresComponent implements OnInit {
     const token = localStorage.getItem('token');
     this.logueado = Boolean(token) && token != '';
   }
+  mostrarDetallesPlace(place: any): void {
+    const placeInfoHeader = {
+      name: place.city,
+      country: place.country,
+      city: place.city,
+      description: place.description,
+      image:
+        'https://media.istockphoto.com/id/539115110/es/foto/colosseum-in-rome-italy-y-sol-de-la-ma%C3%B1ana.jpg?s=612x612&w=0&k=20&c=S2BE7bvASd4hm6Yp0VbtvaGnnqTR4p5HJ-6RfDjR-MQ=',
+    };
+    // Configurar la navegación con los datos de lugar como headers
+    const navigationExtras = {
+      queryParams: {
+        placeInfo: JSON.stringify(placeInfoHeader),
+      },
+    };
+
+    // Navegar a la ruta /intranet/place-home con los datos de lugar como headers
+    this.router.navigate(['/intranet/placeHome'], navigationExtras);
+  }
 
   getDataFromApi(): void {
     const token = localStorage.getItem('token');
