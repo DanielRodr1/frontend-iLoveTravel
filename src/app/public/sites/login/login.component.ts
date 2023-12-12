@@ -21,7 +21,6 @@ export class LoginComponent {
       .post('http://localhost:8080/api/v1/users/login', loginRequest)
       .subscribe(
         (response: any) => {
-          console.log(response);
           if (response.token) {
             localStorage.setItem('token', response.token);
 

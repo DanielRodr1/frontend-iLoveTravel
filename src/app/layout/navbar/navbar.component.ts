@@ -31,7 +31,6 @@ export class NavbarComponent implements OnInit {
         .get<any>(this.apiUrl, { headers, params: { email } })
         .subscribe(
           (response) => {
-            console.log(response);
             this.userName = response['Sesion iniciada Bienvenido ->'];
           },
           (error) => {
