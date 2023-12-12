@@ -31,7 +31,7 @@ export class CreateComponent {
       description: (document.getElementById('description') as HTMLInputElement)
         .value,
       image: (document.getElementById('image') as HTMLInputElement).value,
-      city: (document.getElementById('country') as HTMLInputElement).value,
+      city: (document.getElementById('place_name') as HTMLInputElement).value,
     };
 
     this.httpClient.post(apiUrl, nuevoLugar, { headers }).subscribe(
