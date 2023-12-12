@@ -112,7 +112,12 @@ export class PersonasComponent implements OnInit {
         (response) => {
           console.log(response);
           this.people = response.map((person) => {
-            return { ...person, imagePerfil: 'assets/perfilSIT.png' };
+            return {
+              ...person,
+              imagePerfil: 'assets/perfilSIT.png',
+              description:
+                'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur consectetur dolorum facere minima neque praesentium sint. Alias delectus, exercitationem impedit nesciunt sed velit. Aliquam incidunt mollitia nobis quia recusandae, reiciendis.',
+            };
           });
         },
         (error) => {
