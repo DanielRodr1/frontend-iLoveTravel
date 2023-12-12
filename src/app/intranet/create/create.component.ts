@@ -1,7 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms'; // Importa NgForm
 import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-create',
@@ -9,21 +8,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./create.component.scss'],
 })
 export class CreateComponent {
-  // Elimina las propiedades individuales si decides usar NgForm
-  // place_name: string = '';
-  // country: string = '';
-  // description: string = '';
-  // image: string = '';
-
   constructor(private httpClient: HttpClient, private router: Router) {}
 
-  // Cambia el parámetro de la función para que sea un NgForm
   crearLugar() {
     const apiUrl = 'http://localhost:8080/api/v1/article/create';
     const headers = new HttpHeaders({
       Authorization: `Bearer ${localStorage.getItem('token')?.trim()}`,
-      'Content-Type': 'application/json', // Puedes agregar otros encabezados según sea necesario
+      'Content-Type': 'application/json',
     });
+
     const nuevoLugar = {
       place_name: (document.getElementById('place_name') as HTMLInputElement)
         .value,
@@ -35,10 +28,30 @@ export class CreateComponent {
     };
 
     this.httpClient.post(apiUrl, nuevoLugar, { headers }).subscribe(
-      (response: any) => {},
+      (response: any) => {
+        // Realizar acciones adicionales si es necesario
+        // ...
+        // Configurar los datos que deseas enviar como headers
+      },
       (error: any) => {
         if (error.status == 201) {
-          this.router.navigate(['/intranet/lugares']);
+          const placeInfoHeader = {
+            name: nuevoLugar.place_name,
+            country: nuevoLugar.country,
+            city: nuevoLugar.city,
+            description: nuevoLugar.description,
+            image: nuevoLugar.image,
+          };
+
+          // Configurar la navegación con los datos de lugar como headers
+          const navigationExtras = {
+            queryParams: {
+              placeInfo: JSON.stringify(placeInfoHeader),
+            },
+          };
+
+          // Navegar a la ruta /intranet/place-home con los datos de lugar como headers
+          this.router.navigate(['/intranet/placeHome'], navigationExtras);
         }
         console.error('Error al llamar a la API:', error);
       }
